@@ -3,7 +3,7 @@ require 'uri'
 require 'nokogiri'
 
 $site = "http://www.mosigra.ru"
-$ITERATIONS = 10
+$Iterations = 10
 $mailPattern = Regexp.new('[\w]+@[\w.]+[\w]')
 start = [$site]
 $urllist = [$site]
@@ -11,7 +11,7 @@ $index = 0
 $mailslist = []
 def req(urls)
   for url in urls do
-    if $index < $ITERATIONS - 1
+    if $index < $Iterations - 1
       if url[0] == '/'
         url = $site+url
       end
